@@ -11,3 +11,11 @@ header {
   background-color: lightgray;
   font-size: 3.2rem;
 }
+
+/* MAIN */
+
+.container.description {
+  border: 2px solid lightgray;
+  border-radius: 5px;
+  padding: 50px;
+}
