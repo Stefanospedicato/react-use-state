@@ -9,7 +9,7 @@ const Main = () => {
     <>
       <div className="container d-flex justify-content-between my-5">
         {languages.map(language => (
-          <button key={language.id} onClick={() => setSelectedLanguage(language)} className={selectedLanguage.id == language.id ? "btn btn-warning" : "btn btn-primary"}>{language.title}</button>
+          <button key={language.id} onClick={() => setSelectedLanguage(language)} className={selectedLanguage && selectedLanguage.id === language.id ? "btn btn-warning" : "btn btn-primary"}>{language.title}</button>
         ))}
       </div>
       {selectedLanguage ? (
@@ -18,7 +18,6 @@ const Main = () => {
           <p>{selectedLanguage.description}</p>
         </div>
       ) : <h2 className="text-center">Nessun linguaggio selezionato</h2>}
-
     </>
   )
 }
