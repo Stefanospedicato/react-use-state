@@ -12,12 +12,12 @@ const Main = () => {
           <button key={language.id} onClick={() => setSelectedLanguage(language)} className="btn btn-primary">{language.title}</button>
         ))}
       </div>
-      {selectedLanguage && (
+      {selectedLanguage ? (
         <div className="container description">
           <h3>{selectedLanguage.title}</h3>
           <p>{selectedLanguage.description}</p>
         </div>
-      )}
+      ) : <h2 className="text-center">Nessun linguaggio selezionato</h2>}
 
     </>
   )
